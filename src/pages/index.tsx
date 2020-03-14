@@ -6,7 +6,6 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Next Personal Website</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main style={{ textAlign: 'center' }}>
