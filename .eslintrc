@@ -3,9 +3,31 @@
   "plugins": ["prettier", "react-hooks"],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", {
-      "extensions": [".tsx"]
-    }]
+      "extensions": [".ts", ".tsx"]
+    }],
+    "import/extensions": [
+      "error",
+      {
+        "ts": "ignorePackages",
+        "tsx": "ignorePackages"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".json"
+        ]
+      },
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    }
   }
 }

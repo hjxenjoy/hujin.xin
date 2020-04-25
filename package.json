@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "husky": {
     "hooks": {
@@ -24,9 +25,16 @@
     }
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "date-fns": "^2.12.0",
+    "gray-matter": "^4.0.2",
     "next": "9.3.0",
+    "node-sass": "^4.14.0",
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "remark": "^12.0.0",
+    "remark-highlight.js": "^6.0.0",
+    "remark-html": "^11.0.1"
   },
   "devDependencies": {
     "@types/node": "^13.9.1",
@@ -37,6 +45,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
