@@ -5,6 +5,7 @@ import PageHeader from '../components/PageHeader'
 import '../styles/main.scss'
 import { getAllPosts } from '../lib/api'
 import DateFormater from '../components/DateFormatter'
+import { description, keywords, title } from '../constants'
 
 interface Props {
   posts: Post[]
@@ -14,7 +15,9 @@ export default function Home({ posts }: Props) {
   return (
     <>
       <Head>
-        <title>胡金鑫的个人网站</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
       </Head>
       <PageHeader />
       <main className="container">

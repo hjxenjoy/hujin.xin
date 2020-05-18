@@ -8,6 +8,7 @@ import PostBody from '../../components/PostContent'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/md2html'
 import '../../styles/main.scss'
+import { title, description, keywords } from '../../constants'
 
 interface Props {
   post: Post
@@ -24,7 +25,11 @@ export default function Post({ post }: Props) {
   ) : (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>
+          {post.title} | {title}
+        </title>
+        <meta name="description" content={`${post.title} | ${description}`} />
+        <meta name="keywords" content={`${post.tags.join(',')},${keywords}`} />
       </Head>
       <PageHeader />
       <article className="article">
