@@ -24,7 +24,7 @@ export default function Home({ posts }: Props) {
         <ul className="post-list">
           {posts.map(post => (
             <li key={post.slug} className="post-entry">
-              <Link href={`/posts/${post.slug}`}>
+              <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
                 <a href={`/posts/${post.slug}`}>{post.title}</a>
               </Link>
               <div className="post-infor">
