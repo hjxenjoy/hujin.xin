@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Baloo Bhaina 2', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: 'Baloo 2', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   background-color: rgba($light, .25);
@@ -30,7 +30,7 @@ body {
 .post-title {
   margin: 0 0 .5em;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.8em;
   color: $strong-dark;
 }
 
@@ -95,7 +95,7 @@ body {
 
 .container {
   padding: 0 1em;
-  max-width: 960px;
+  max-width: 680px;
   margin: 0 auto;
   min-height: calc(100vh - 200px);
 }

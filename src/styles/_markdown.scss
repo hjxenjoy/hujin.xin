@@ -2,16 +2,22 @@
 
 .markdown {
   h1, h2, h3, h4, h5 {
-    margin: 0 0 .5em;
+    margin: 1em 0 .5em;
     font-weight: 500;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+
+    &::before {
+      content: "§";
+      margin-right: .5em;
+      font-weight: 400;;
+    }
   }
 
   h3 {
@@ -57,7 +63,7 @@
 
   a {
     text-decoration: none;
-    color: $strong;
+    color: $em;
 
     &:hover {
       text-decoration: underline;
