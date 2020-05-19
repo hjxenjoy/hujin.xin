@@ -7,7 +7,6 @@ import PostHeader from '../../components/PostHeader'
 import PostBody from '../../components/PostContent'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/md2html'
-import '../../styles/main.scss'
 import { title, description, keywords } from '../../constants'
 
 interface Props {

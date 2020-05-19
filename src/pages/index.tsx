@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import PageHeader from '../components/PageHeader'
 
-import '../styles/main.scss'
 import { getAllPosts } from '../lib/api'
 import DateFormater from '../components/DateFormatter'
 import { description, keywords, title } from '../constants'

@@ -3,6 +3,8 @@ import React from 'react'
 import App, { AppProps } from 'next/app'
 import { googleTrackingId } from '../constants'
 
+import '../styles/main.scss'
+
 const isProd = process.env.NODE_ENV === 'production'
 
 export default class MyApp extends App<AppProps> {

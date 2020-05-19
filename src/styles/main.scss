@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: 'Baloo Bhaina 2', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   background-color: rgba($light, .25);
@@ -42,7 +42,6 @@ body {
   time {
     margin-right: 1em;
     font-size: 14px;
-    font-family: 'Baloo Bhaina 2';
   }
 }
 
@@ -62,7 +61,6 @@ body {
 
 .page-footer {
   padding: 2em;
-  font-family: 'Baloo Bhaina 2';
 }
 
 .slogan {
@@ -92,7 +90,6 @@ body {
 
 .home-link {
   text-decoration: none;
-  font-family: 'Baloo Bhaina 2';
   color: $strong;
 }
 
@@ -128,6 +125,5 @@ body {
   time {
     margin-right: 1em;
     font-size: 14px;
-    font-family: 'Baloo Bhaina 2';
   }
 }
