@@ -3,6 +3,7 @@
   "plugins": ["prettier", "react-hooks"],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "no-unused-vars": "off",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", {
@@ -26,8 +27,7 @@
           ".tsx",
           ".json"
         ]
-      },
-      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+      }
     }
   }
 }

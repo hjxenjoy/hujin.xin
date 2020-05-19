@@ -1,4 +1,4 @@
-export const title = '胡金鑫的个人网站'
-export const description = '胡金鑫的个人网站，集中前端开发'
-export const keywords =
-  '胡金鑫,个人博客,个人网站,hujin.xin,hjxenjoy,前端开发,JavaScript,css,html,React,Vue'
+export const title = process.env.TITLE
+export const description = process.env.DESCRIPTION
+export const keywords = process.env.KEYWORDS
+export const googleTrackingId = process.env.GA_ID

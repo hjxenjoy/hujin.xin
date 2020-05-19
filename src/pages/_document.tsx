@@ -1,12 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import PageFooter from '../components/PageFooter'
+import { googleTrackingId } from '../constants'
 
-const googleTags = `
-window.dataLayer = window.dataLayer || [];
+const googleTags = `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-167052593-1');
-`
+gtag('config', '${googleTrackingId}');`
+
 const isProd = process.env.NODE_ENV === 'production'
 
 export default class MyDocument extends Document {
@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
             <>
               <script
                 async
-                src="https://www.googletagmanager.com/gtag/js?id=UA-167052593-1"
+                src={`https://www.googletagmanager.com/gtag/js?id=${googleTrackingId}`}
               />
               <script dangerouslySetInnerHTML={{ __html: googleTags }} />
             </>
