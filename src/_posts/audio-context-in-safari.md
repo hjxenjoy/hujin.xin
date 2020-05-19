@@ -59,6 +59,8 @@ async function play(mp3: File) {
 
   sourceNode.start()
 }
+
+playButton.addEventListener('click', play)
 ```
 
 ## 其他注意事项
