@@ -156,6 +156,15 @@ async function upload(file: File) {
 * 浏览器自带的 [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) 无法获取实时上传进度，可以考虑使用 [`axios`](https://github.com/axios/axios) 的 `onUploadProgress` 回调
 * Java 和 Node 生成临时授权地址的设置有不同，Node 如果设置了 response 的 [`content-disposition`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition)，再设置 `content-type`，生成的地址访问会出错
 
+## 附件直接预览
+
+新的OSS bucket 使用 OSS 默认域名访问 html、图片资源，会有以附件形式下载的情况。
+若需要浏览器直接访问，需使用自定义域名进行访问。
+
+此时只需要将生成的临时授权 url 中 OSS 默认域名改成配置好的[自定义域名](https://help.aliyun.com/document_detail/31836.html)即可，不需要设置`content-type`。
+
+但是如果配置了 `content-disposition: attachment;`，则还是会以附件形式下载。
+
 ## 参考文档
 
 * [npm ali-oss](https://github.com/ali-sdk/ali-oss)
