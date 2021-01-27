@@ -35,7 +35,7 @@ function isWebpSupport() {
   })
 }
 
-if (!'webpAccept' in window) {
+if (!('webpAccept' in window)) {
   isWebpSupport().then(function (webpAccept) {
     window.webpAccept = webpAccept
   })
