@@ -6,5 +6,5 @@ module.exports = {
     DESCRIPTION: '胡金鑫的个人网站，集中前端开发',
     KEYWORDS:
       '胡金鑫,个人博客,个人网站,hujin.xin,hjxenjoy,前端开发,JavaScript,css,html,React,Vue',
-  }
+  },
 }

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import PageHeader from '../components/PageHeader'
 
 import { getAllPosts } from '../lib/api'
-import DateFormater from '../components/DateFormatter'
+import DateFormatter from '../components/DateFormatter'
 import { description, keywords, title } from '../constants'
 
 interface Props {
@@ -26,8 +26,8 @@ export default function Home({ posts }: Props) {
               <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
                 <a href={`/posts/${post.slug}`}>{post.title}</a>
               </Link>
-              <div className="post-infor">
-                <DateFormater dateString={post.date} />
+              <div className="post-info">
+                <DateFormatter dateString={post.date} />
                 {post.tags.map(tag => (
                   <span className="post-tag" key={tag}>
                     {tag}

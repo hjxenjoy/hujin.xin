@@ -1,5 +1,5 @@
 import React from 'react'
-import DateFormater from './DateFormatter'
+import DateFormatter from './DateFormatter'
 
 interface Props {
   title: string
@@ -12,7 +12,7 @@ export default function PostHeader({ title, date, tags }: Props) {
     <>
       <h1 className="post-title">{title}</h1>
       <div className="post-profile">
-        <DateFormater dateString={date} />
+        <DateFormatter dateString={date} />
         {tags.map(tag => (
           <span className="post-tag" key={tag}>
             {tag}

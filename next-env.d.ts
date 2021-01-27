@@ -1,6 +1,3 @@
-// / <reference types="next" />
-// / <reference types="next/types/global" />
-
 declare interface Post {
   title: string
   slug: string
@@ -9,3 +6,7 @@ declare interface Post {
   tags: string[]
   content: string
 }
+
+declare module 'remark-html'
+declare module 'remark-external-links'
+declare module 'remark-highlight.js'

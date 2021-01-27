@@ -1,22 +1,23 @@
 {
-  "extends": ["prettier", "prettier/react"],
-  "plugins": ["prettier", "react-hooks"],
   "parser": "@typescript-eslint/parser",
+  "extends": [
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "react-hooks"
+  ],
   "rules": {
+    "prettier/prettier": "error",
     "no-unused-vars": "off",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", {
       "extensions": [".ts", ".tsx"]
-    }],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
+    }]
   },
   "settings": {
     "import/resolver": {
