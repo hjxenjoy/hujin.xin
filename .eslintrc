@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": ["prettier", "prettier/react"],
   "plugins": ["prettier", "react-hooks"],
   "parser": "@typescript-eslint/parser",
   "rules": {
@@ -11,9 +11,10 @@
     }],
     "import/extensions": [
       "error",
+      "ignorePackages",
       {
-        "ts": "ignorePackages",
-        "tsx": "ignorePackages"
+        "ts": "never",
+        "tsx": "never"
       }
     ]
   },

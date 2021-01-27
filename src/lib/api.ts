@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
+import * as matter from 'gray-matter'
 import { parseISO } from 'date-fns'
 
 const postsDirectory = path.resolve(process.cwd(), 'src', '_posts')
