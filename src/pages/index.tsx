@@ -19,17 +19,28 @@ export default function Home({ posts }: Props) {
         <meta name="keywords" content={keywords} />
       </Head>
       <PageHeader />
-      <main className="container">
-        <ul className="post-list">
+      <main
+        className="mx-auto px-4 max-w-screen-sm"
+        style={{ minHeight: 'calc(100vh - 200px)' }}
+      >
+        <ul>
           {posts.map(post => (
-            <li key={post.slug} className="post-entry">
-              <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
-                <a href={`/posts/${post.slug}`}>{post.title}</a>
+            <li
+              key={post.slug}
+              className="mb-4 bg-teal-100 bg-opacity-50 rounded-md p-4"
+            >
+              <Link href={'/posts/[slug]'} as={`/posts/${post.slug}`}>
+                <a
+                  className="text-teal-900 font-medium"
+                  href={`/posts/${post.slug}`}
+                >
+                  {post.title}
+                </a>
               </Link>
-              <div className="post-info">
+              <div className="mt-2">
                 <DateFormatter dateString={post.date} />
                 {post.tags.map(tag => (
-                  <span className="post-tag" key={tag}>
+                  <span className="tag" key={tag}>
                     {tag}
                   </span>
                 ))}

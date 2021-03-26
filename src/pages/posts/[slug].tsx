@@ -31,7 +31,7 @@ export default function Post({ post }: Props) {
         <meta name="keywords" content={`${post.tags.join(',')},${keywords}`} />
       </Head>
       <PageHeader />
-      <article className="article">
+      <article className="mx-auto max-w-screen-md px-4 pb-8">
         <PostHeader {...post} />
         <PostBody content={post.content} />
       </article>

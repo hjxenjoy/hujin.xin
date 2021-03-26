@@ -4,7 +4,11 @@ interface Props {
   dateString: string
 }
 
-export default function DateFormater({ dateString }: Props) {
+export default function DateFormatter({ dateString }: Props) {
   const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL	d, yyyy')}</time>
+  return (
+    <time dateTime={dateString} className="text-sm text-gray-400">
+      {format(date, 'LLLL	d, yyyy')}
+    </time>
+  )
 }
