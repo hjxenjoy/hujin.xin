@@ -16,111 +16,112 @@ body {
     content: "•";
     @apply mr-1;
   }
+}
 
-  .prose h2 {
-    @apply relative text-xl font-medium mb-5 mb-2.5 text-teal-900;
-  }
+.prose h2 {
+  @apply relative text-xl font-medium mb-5 mb-2.5 text-teal-900;
+}
 
-  .prose hr {
-    @apply my-4;
-  }
+.prose hr {
+  @apply my-4;
+}
 
-  .prose h2::before {
-    content: "§";
-    @apply absolute -left-4 font-normal;
-  }
+.prose h2::before {
+  content: "§";
+  @apply absolute -left-4 font-normal;
+}
 
-  .prose p {
-    @apply mt-3 mb-2;
-  }
+.prose p {
+  @apply mt-3 mb-2;
+}
 
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4,
-  .prose h5,
-  .prose h6,
-  .prose blockquote,
-  .prose thead {
-    @apply text-teal-900;
-  }
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose blockquote,
+.prose thead {
+  @apply text-teal-900;
+}
 
-  .prose strong {
-    @apply text-teal-800;
-  }
+.prose strong {
+  @apply text-teal-800;
+}
 
-  .prose code {
-    @apply text-purple-600;
-  }
+.prose code {
+  @apply text-purple-600;
+}
 
-  .prose pre {
-    @apply bg-teal-900 text-base text-teal-100 my-2 p-0;
-  }
+.prose pre {
+  @apply bg-teal-900 text-base text-teal-100 my-2 p-0;
+}
 
-  .prose pre,
-  .prose code {
-    font-family: 'mononoki Nerd Font', 'Ubuntu Mono', 'Courier New', Courier, monospace;
-  }
+.prose pre,
+.prose code {
+  font-family: 'mononoki Nerd Font', 'Ubuntu Mono', 'Courier New', Courier, monospace;
+}
 
-  .prose .hljs {
-    @apply block overflow-x-auto p-4 bg-teal-900 rounded;
-  }
+.prose .hljs {
+  @apply block overflow-x-auto p-4 bg-teal-900 rounded;
+}
 
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  @apply text-yellow-400;
+}
+
+.hljs-function .hljs-keyword {
+  @apply text-green-400;
+}
+
+.hljs,
+.hljs-subst {
+  @apply text-teal-200;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  @apply text-yellow-400;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  @apply text-teal-600;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-literal,
-  .hljs-section,
-  .hljs-link {
-    @apply text-yellow-400;
-  }
-
-  .hljs-function .hljs-keyword {
-    @apply text-green-400;
-  }
-
-  .hljs,
-  .hljs-subst {
-    @apply text-teal-200;
-  }
-
-  .hljs-string,
   .hljs-title,
-  .hljs-name,
+  .hljs-section,
+  .hljs-doctag,
   .hljs-type,
-  .hljs-attribute,
-  .hljs-symbol,
-  .hljs-bullet,
-  .hljs-addition,
-  .hljs-variable,
-  .hljs-template-tag,
-  .hljs-template-variable {
-    @apply text-yellow-400;
-  }
-
-  .hljs-comment,
-  .hljs-quote,
-  .hljs-deletion,
-  .hljs-meta {
-    @apply text-teal-600;
-  }
-
-  @media
-  (-webkit-min-device-pixel-ratio: 1.5),
-  (min-resolution: 144dpi) {
-    .hljs-keyword,
-    .hljs-selector-tag,
-    .hljs-literal,
-    .hljs-title,
-    .hljs-section,
-    .hljs-doctag,
-    .hljs-type,
-    .hljs-name,
-    .hljs-strong {
-      @apply font-medium;
-    }
-  }
-
-  .hljs-emphasis {
-    @apply italic;
+  .hljs-name,
+  .hljs-strong {
+    @apply font-medium;
   }
 }
+
+.hljs-emphasis {
+  @apply italic;
+}
+
