@@ -62,7 +62,7 @@ body {
 .prose pre,
 .prose code,
 .prose pre code {
-  font-family: 'mononoki Nerd Font', 'Ubuntu Mono', 'Courier New', Courier, monospace;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
 }
 
 .prose .hljs {
