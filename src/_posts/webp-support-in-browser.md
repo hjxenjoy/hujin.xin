@@ -30,6 +30,7 @@ function isWebpSupport() {
     webp.addEventListener('error', () => {
       resolve(false)
     })
+    // 下面这段字符串可以通过canvas.toDataUrl('image/webp')的方式获取
     webp.src =
       'data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACyAgCdASoBAAEALmk0mk0iIiIiIgBoSygABc6zbAAA/v56QAAAAA=='
   })
@@ -40,6 +41,19 @@ if (!('webpAccept' in window)) {
     window.webpAccept = webpAccept
   })
 }
+```
+
+**但是**
+
+> 浏览器支持 webp 不代表 canvas 可以转成 webp 格式的 base64 字符串！ 
+
+```js
+const canvas = document.createElement('canvas')
+canvas.width = 1
+canvas.height = 1
+const dataUrl = canvas.toDataURL('image/webp')
+// 不支持 canvas 转 webp 的浏览器(safari/firefox)，会生成 png 格式的 base64 字符串
+console.log(dataUrl.indexOf('data:image/webp;base64,') === 0)
 ```
 
 ## 参考文档
