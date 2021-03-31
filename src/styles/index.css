@@ -7,6 +7,22 @@ body {
   @apply bg-teal-50 antialiased text-teal-900;
 }
 
+@font-face {
+  font-family: 'mononoki';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/mononokiRegularNerd.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'mononoki';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/mononokiItalicNerd.woff2) format('woff2');
+}
+
 @layer components {
 
   .tag {
@@ -62,7 +78,7 @@ body {
 .prose pre,
 .prose code,
 .prose pre code {
-  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  font-family: mononoki, "Ubuntu Mono", "Courier New", Courier, monospace;
 }
 
 .prose .hljs {
