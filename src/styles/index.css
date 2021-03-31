@@ -102,7 +102,6 @@ body {
   @apply text-teal-200;
 }
 
-.hljs-string,
 .hljs-title,
 .hljs-name,
 .hljs-type,
@@ -114,6 +113,10 @@ body {
 .hljs-template-tag,
 .hljs-template-variable {
   @apply text-yellow-400;
+}
+
+.hljs-string {
+  @apply text-indigo-400 italic;
 }
 
 .hljs-comment,
