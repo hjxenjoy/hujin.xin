@@ -1,6 +1,6 @@
 import React from 'react'
 import App, { AppProps } from 'next/app'
-import { googleTrackingId } from '../constants'
+import { googleTagId } from '../constants'
 
 import '../styles/index.css'
 
@@ -11,7 +11,7 @@ export default class MyApp extends App<AppProps> {
     const { router } = this.props
     function handleRouteChange(url: string) {
       if (isProd && typeof window !== 'undefined' && (window as any).gtag) {
-        ;(window as any).gtag('config', googleTrackingId, { page_path: url })
+        ;(window as any).gtag('config', googleTagId, { page_path: url })
       }
     }
     router.events.on('routeChangeComplete', handleRouteChange)
