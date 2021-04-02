@@ -27,11 +27,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Roboto:ital,wght@0,400;0,500;1,400&family=Ubuntu+Mono&display=swap"
             rel="stylesheet"
           />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-          <PageFooter />
           {isProd && (
             <>
               <script
@@ -41,6 +36,11 @@ export default class MyDocument extends Document {
               <script dangerouslySetInnerHTML={{ __html: googleTags }} />
             </>
           )}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+          <PageFooter />
         </body>
       </Html>
     )
