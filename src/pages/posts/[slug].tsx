@@ -2,9 +2,10 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 
+import { Box } from '@chakra-ui/react'
+import React from 'react'
 import PageHeader from '../../components/PageHeader'
 import PostHeader from '../../components/PostHeader'
-import PostBody from '../../components/PostContent'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/md2html'
 import { title, description } from '../../constants'
@@ -20,7 +21,7 @@ export default function Post({ post }: Props) {
   }
 
   return router.isFallback ? (
-    <div>Loading…</div>
+    <Box textAlign="center">Loading…</Box>
   ) : (
     <>
       <Head>
@@ -30,10 +31,10 @@ export default function Post({ post }: Props) {
         <meta name="description" content={`${post.title} | ${description}`} />
       </Head>
       <PageHeader />
-      <article className="mx-auto max-w-screen-md px-4 pb-8">
+      <Box as="main" mx="auto" maxW="2xl" px={4} pb={8}>
         <PostHeader {...post} />
-        <PostBody content={post.content} />
-      </article>
+        <article dangerouslySetInnerHTML={{ __html: post.content }} />
+      </Box>
     </>
   )
 }

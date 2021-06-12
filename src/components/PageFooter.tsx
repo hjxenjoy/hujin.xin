@@ -1,13 +1,13 @@
 import React from 'react'
+import { Box, useColorModeValue, Text } from '@chakra-ui/react'
 
 export default function PageFooter() {
   const year = new Date().getFullYear()
+  const color = useColorModeValue('teal.600', 'gray.300')
   return (
-    <footer className="p-8 text-indigo-500">
-      <p className="text-center">to be a better man.</p>
-      <div className="mt-2 flex items-center justify-center">
-        &copy;&nbsp;{year}&nbsp;Jinxin Hu.
-      </div>
-    </footer>
+    <Box as="footer" p={8} color={color} textAlign="center">
+      <Text as="p">to be a better man.</Text>
+      <Text mt={2}>&copy;&nbsp;{year}&nbsp;Jinxin Hu.</Text>
+    </Box>
   )
 }
