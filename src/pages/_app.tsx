@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { ChakraProvider } from '@chakra-ui/react'
+
 import { googleTagId } from '../constants'
 
 import '@fontsource/baloo-2'
 import '@fontsource/mononoki'
 import '@fontsource/roboto'
-
-import '../styles/index.css'
+import theme from '../theme'
+import PageFooter from '../components/PageFooter'
 
 const googleTags = `
 window.dataLayer = window.dataLayer || [];
@@ -44,7 +46,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
           </>
         )}
       </Head>
-      <Component {...pageProps} />
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+        <PageFooter />
+      </ChakraProvider>
     </>
   )
 }

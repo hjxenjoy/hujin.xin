@@ -1,5 +1,7 @@
 import React from 'react'
+import { Box, Heading, useColorModeValue } from '@chakra-ui/react'
 import DateFormatter from './DateFormatter'
+import Tag from './Tag'
 
 interface Props {
   title: string
@@ -8,17 +10,19 @@ interface Props {
 }
 
 export default function PostHeader({ title, date, tags }: Props) {
+  const lineColor = useColorModeValue('teal.500', 'gray.600')
+
   return (
     <>
-      <h1 className="mb-4 text-2xl text-teal-100">{title}</h1>
-      <div className="mb-4 pb-2 border-b border-teal-600">
+      <Heading as="h1" mb={4} fontWeight="medium" fontSize="xl">
+        {title}
+      </Heading>
+      <Box mb={4} pb={2} borderBottomWidth={1} borderBottomColor={lineColor}>
         <DateFormatter dateString={date} />
         {tags.map(tag => (
-          <span className="tag" key={tag}>
-            {tag}
-          </span>
+          <Tag key={tag}>{tag}</Tag>
         ))}
-      </div>
+      </Box>
     </>
   )
 }
