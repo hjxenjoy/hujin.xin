@@ -10,8 +10,8 @@ interface Props {
 export default function PostHeader({ title, date, tags }: Props) {
   return (
     <>
-      <h1 className="mb-4 text-2xl text-teal-900">{title}</h1>
-      <div className="mb-4 pb-2 border-b border-teal-700">
+      <h1 className="mb-4 text-2xl text-teal-100">{title}</h1>
+      <div className="mb-4 pb-2 border-b border-teal-600">
         <DateFormatter dateString={date} />
         {tags.map(tag => (
           <span className="tag" key={tag}>

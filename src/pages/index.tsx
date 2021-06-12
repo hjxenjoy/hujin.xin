@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader'
 
 import { getAllPosts } from '../lib/api'
 import DateFormatter from '../components/DateFormatter'
-import { description, keywords, title } from '../constants'
+import { description, title } from '../constants'
 
 interface Props {
   posts: Post[]
@@ -16,22 +16,15 @@ export default function Home({ posts }: Props) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
       </Head>
       <PageHeader />
-      <main
-        className="mx-auto px-4 max-w-screen-sm"
-        style={{ minHeight: 'calc(100vh - 200px)' }}
-      >
-        <ul>
+      <main className="mx-auto px-4 max-w-screen-sm">
+        <ul className="space-y-4">
           {posts.map(post => (
-            <li
-              key={post.slug}
-              className="mb-4 bg-teal-100 bg-opacity-50 rounded-md p-4"
-            >
+            <li key={post.slug} className="border border-white border-opacity-20 rounded p-4">
               <Link href={'/posts/[slug]'} as={`/posts/${post.slug}`}>
                 <a
-                  className="text-teal-900 font-medium"
+                  className="text-teal-100 font-medium hover:underline hover:text-teal-200"
                   href={`/posts/${post.slug}`}
                 >
                   {post.title}
@@ -54,9 +47,7 @@ export default function Home({ posts }: Props) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(['title', 'date', 'slug', 'tags']).map(
-    item => item.post
-  )
+  const posts = getAllPosts(['title', 'date', 'slug', 'tags']).map(item => item.post)
 
   return {
     props: { posts },

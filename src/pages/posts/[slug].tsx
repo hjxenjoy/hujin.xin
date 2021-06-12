@@ -7,7 +7,7 @@ import PostHeader from '../../components/PostHeader'
 import PostBody from '../../components/PostContent'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/md2html'
-import { title, description, keywords } from '../../constants'
+import { title, description } from '../../constants'
 
 interface Props {
   post: Post
@@ -28,7 +28,6 @@ export default function Post({ post }: Props) {
           {post.title} | {title}
         </title>
         <meta name="description" content={`${post.title} | ${description}`} />
-        <meta name="keywords" content={`${post.tags.join(',')},${keywords}`} />
       </Head>
       <PageHeader />
       <article className="mx-auto max-w-screen-md px-4 pb-8">
@@ -40,13 +39,7 @@ export default function Post({ post }: Props) {
 }
 
 export async function getStaticProps({ params }) {
-  const { post } = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'tags',
-    'content',
-  ])
+  const { post } = getPostBySlug(params.slug, ['title', 'date', 'slug', 'tags', 'content'])
 
   const content = await markdownToHtml(post.content || '')
 

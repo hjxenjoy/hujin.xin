@@ -7,9 +7,6 @@ interface Props {
 export default function PostBody({ content }: Props) {
   return (
     // eslint-disable-next-line react/no-danger
-    <div
-      className="prose prose-yellow w-full max-w-full text-teal-900"
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+    <div className="prose w-full max-w-full" dangerouslySetInnerHTML={{ __html: content }} />
   )
 }

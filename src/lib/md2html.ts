@@ -5,10 +5,9 @@ import highlight from 'remark-highlight.js'
 
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
-    // .use(externalLinks, {target: '_blank', rel: ['nofollow', 'noopener', 'noreferrer']})
     .use(externalLinks)
     .use(html)
-    .use(highlight)
+    .use(highlight, { prefix: 'highlight-js-' })
     .process(markdown)
   return result.toString()
 }
