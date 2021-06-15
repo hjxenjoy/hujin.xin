@@ -22,7 +22,7 @@ export default function Home({ posts }: Props) {
       </Head>
       <PageHeader />
       <Box as="main" mx="auto" px={4} maxWidth="lg">
-        <UnorderedList spacing={[0, 4]} listStyleType="none" mx={0}>
+        <UnorderedList spacing={4} listStyleType="none" mx={0}>
           {posts.map(post => (
             <ListItem
               key={post.slug}
